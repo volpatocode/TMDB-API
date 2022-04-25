@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import MovieBox from "./components/MovieBox";
 import React from "react";
-import NavBar from "./components/MovieBox/NavBar";
+import NavBar from "./components/NavBar";
+import MovieCard from "./components/MovieCard";
 
 export default function Home() {
   const [movies, setMovies] = useState([]);
@@ -18,12 +19,11 @@ export default function Home() {
   }, []);
 
   return (
-    // <div>
-    //   {movies.map((movieReq) => (
-    //     <MovieBox key={movieReq.id} {...movieReq}/>
-    //   ))}
-    //   ;
-    // </div>
-    <NavBar/>
+    <div>
+      {movies.map((movieReq) => (
+        <MovieBox key={movieReq.id} {...movieReq} />
+      ))}
+      ;
+    </div>
   );
 }

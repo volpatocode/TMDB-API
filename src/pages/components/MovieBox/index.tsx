@@ -1,28 +1,23 @@
 import React from "react";
+import MovieCard from "../MovieCard";
 import * as S from "./styles";
 
 type propsType = {
-  title:string;
-  poster_path:string;
-  vote_Average:string;
-  overview:string;
-  release_date:string;
+  title: string;
+  poster_path: string;
+  vote_average: string;
 };
 
-const API_IMG="https://image.tmdb.org/t/p/w500/";
-
-const index = ({
-  title,
-  poster_path,
-  vote_Average,
-  overview,
-  release_date,
-}: propsType) => {
+const index = ({ title, poster_path, vote_average }: propsType) => {
   return (
     <S.MovieBox>
-      <h1>{title}</h1>
-      <img src={API_IMG+poster_path} alt="Movie Poster" />
-      <p>{overview}</p>
+      <div className="flex-item">
+        <MovieCard
+          title={title}
+          poster_path={poster_path}
+          vote_average={vote_average}
+        />
+      </div>
     </S.MovieBox>
   );
 };
