@@ -4,13 +4,12 @@ export const MovieBox = styled.div`
   width: 70%;
   margin: 0 auto;
   display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
   
   img{
     max-width: 100%;
     display: block;
   }
-
-  .flex-item{
-    flex: 1 1 200px;
-  }
 `;
+

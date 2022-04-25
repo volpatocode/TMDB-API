@@ -1,23 +1,14 @@
 import React from "react";
-import MovieCard from "../MovieCard";
+import MovieList from "../MovieList";
 import * as S from "./styles";
 
 type propsType = {
-  title: string;
-  poster_path: string;
-  vote_average: string;
 };
 
-const index = ({ title, poster_path, vote_average }: propsType) => {
+const index = ({}: propsType) => {
   return (
     <S.MovieBox>
-      <div className="flex-item">
-        <MovieCard
-          title={title}
-          poster_path={poster_path}
-          vote_average={vote_average}
-        />
-      </div>
+        <MovieList/>
     </S.MovieBox>
   );
 };
