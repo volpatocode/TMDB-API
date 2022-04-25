@@ -1,6 +1,7 @@
 import React from "react";
 import MovieTitle from "../MovieTitle";
 import MovieVoteAv from "../MovieVoteAv";
+import MovieDetails from "../MovieDetails";
 
 import * as S from "./styles";
 
@@ -23,6 +24,7 @@ const index = ({ title, vote_average, poster_path }: propsType) => {
       </div>
 
       <div className="bottom">
+        <MovieDetails />
         <MovieVoteAv voteAverage={vote_average} />
       </div>
     </S.MovieCard>
