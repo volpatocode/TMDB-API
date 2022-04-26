@@ -3,6 +3,9 @@ import styled from "styled-components";
 export const NavBar = styled.div`
   width: 100%;
   background-color: #000;
+  height: 70px;
+  display: flex;
+  justify-content: center;
 
   .flex {
     display: flex;

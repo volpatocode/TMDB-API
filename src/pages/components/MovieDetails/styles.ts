@@ -4,6 +4,7 @@ export const MovieDetails = styled.button`
   background-color: #fff;
   padding: 5px 8px;
   border-radius: 15px;
+  cursor: pointer;
 
   h3 {
     font-size: 1.2rem;
