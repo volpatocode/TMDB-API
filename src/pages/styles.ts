@@ -54,10 +54,10 @@ export const NavBar = styled.div`
   }
 
   .languageButton {
+    background: red;
     padding: 8px 18px;
     font-size: 1.1rem;
     color: #fff;
-    background: none;
     border-radius: 15px;
     font-weight: bold;
     height: 35px;
@@ -83,3 +83,20 @@ export const NavBar = styled.div`
     transition: 200ms ease;
   }
 `;
+
+export const MovieBox = styled.div`
+  width: 70%;
+  margin: 35px auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 35px 0px;
+  
+  img{
+    max-width: 100%;
+    display: block;
+  }
+`;
+
