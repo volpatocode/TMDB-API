@@ -18,15 +18,10 @@ const index = ({ title, vote_average, poster_path }: propsType) => {
       <div className="top">
         <MovieTitle titleText={title} />
       </div>
-      {poster_path ? (
-        <div className="middle">
-          <img src={API_IMG + poster_path} alt="Movie Poster" />
-        </div>
-      ) : (
-        <div className="middle">
-          <img src="images/posterNF.png" alt="Movie Poster" />
-        </div>
-      )}
+
+      <div className="middle">
+        <img src={API_IMG + poster_path} alt="Movie Poster" />
+      </div>
 
       <div className="bottom">
         <MovieDetails />

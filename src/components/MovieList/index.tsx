@@ -2,11 +2,12 @@ import { useState, useEffect } from "react";
 import React from "react";
 import MovieCard from "../MovieCard";
 
-type propsType = {};
+type propsType = {
+  movies: any;
+  setMovies: any;
+};
 
-const index = ({}: propsType) => {
-  const [movies, setMovies] = useState([]);
-
+const index = ({ movies, setMovies }: propsType) => {
   useEffect(() => {
     fetch(
       "https://api.themoviedb.org/3/movie/popular?api_key=f04297956f564d66b4a51ff3da1c6c30"
