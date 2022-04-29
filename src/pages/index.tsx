@@ -8,7 +8,7 @@ export default function Home() {
 
   return (
     <>
-      <NavBar movies={movies} setMovies={setMovies} />
+      <NavBar page="index" movies={movies} setMovies={setMovies} />
       <MovieBox movies={movies} setMovies={setMovies} />
       <Footer />
     </>

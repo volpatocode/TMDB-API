@@ -3,11 +3,12 @@ import * as S from "./styles";
 import { useState, useEffect } from "react";
 
 type propsType = {
-  movies: any;
-  setMovies: any;
+  movies?: any;
+  setMovies?: any;
+  page: "index" | "details";
 };
 
-const index = ({ movies, setMovies }: propsType) => {
+const index = ({ movies, setMovies, page }: propsType) => {
   const [query, setQuery] = useState("");
 
   const searchMovie = async (e) => {
@@ -23,12 +24,9 @@ const index = ({ movies, setMovies }: propsType) => {
       console.log(e);
     }
   };
-  
 
-  console.log(query)
-
-  return (
-    <>
+  if (page === "index") {
+    return (
       <S.NavBar>
         <div className="flex">
           <div className="left">
@@ -55,8 +53,29 @@ const index = ({ movies, setMovies }: propsType) => {
           </div>
         </div>
       </S.NavBar>
-    </>
-  );
+    );
+  } else {
+    return (
+      <S.NavBar>
+        <div className="flex">
+          <div className="left">
+            <a href="#" className="logo">
+              Logo
+            </a>
+          </div>
+
+          <div className="right">
+            <a href="#" className="languageButton">
+              PT-BR
+            </a>
+            <a href="#" className="accountButton">
+              Crie sua conta
+            </a>
+          </div>
+        </div>
+      </S.NavBar>
+    );
+  }
 };
 
 export default index;
