@@ -6,6 +6,7 @@ export const NavBar = styled.div`
   height: 70px;
   display: flex;
   justify-content: center;
+  margin-bottom: 35px;
 
   .flex {
     display: flex;
