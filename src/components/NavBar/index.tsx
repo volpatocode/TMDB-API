@@ -1,6 +1,7 @@
 import React from "react";
 import * as S from "./styles";
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import Link from "next/link";
 
 type propsType = {
   movies?: any;
@@ -30,9 +31,10 @@ const index = ({ movies, setMovies, page }: propsType) => {
       <S.NavBar>
         <div className="flex">
           <div className="left">
-            <a href="#" className="logo">
-              Logo
-            </a>
+            <Link href="/">
+              <a className="logo">Logo</a>
+            </Link>
+
             <form onSubmit={searchMovie}>
               <input
                 type="text"
@@ -59,9 +61,9 @@ const index = ({ movies, setMovies, page }: propsType) => {
       <S.NavBar>
         <div className="flex">
           <div className="left">
-            <a href="#" className="logo">
-              Logo
-            </a>
+            <Link href="/">
+              <a className="logo">Logo</a>
+            </Link>
           </div>
 
           <div className="right">

@@ -33,7 +33,7 @@ export const MovieCard = styled.div`
   .bottom {
     grid-area: "bottom";
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 85%;
     margin: 0 auto;
