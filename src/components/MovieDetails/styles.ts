@@ -1,16 +1,32 @@
 import styled from "styled-components";
 
 export const MovieDetails = styled.div`
-  width: 70%;
-  margin: auto;
-  margin-bottom: 35px;
-  border-radius: 25px;
-  background-color: #1f1f23;
-  padding: 28px;
-  grid-template-columns: 30% 70%;
-  grid-template-areas: "left" "right";
-  display: grid;
-  column-gap: 2rem;
+  .gridWrapper {
+    width: 70%;
+    min-height: 500px;
+    margin: auto;
+    margin-bottom: 35px;
+    border-radius: 25px;
+    background-color: #1f1f23;
+    padding: 28px;
+    grid-template-columns: 30% 70%;
+    grid-template-areas: "left" "right";
+    display: grid;
+    column-gap: 2rem;
+  }
+
+  .wrapper{
+    width: 70%;
+    min-height: 500px;
+    margin: auto;
+    margin-bottom: 35px;
+    border-radius: 25px;
+    background-color: #1f1f23;
+    padding: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   img {
     width: 100%;
@@ -75,5 +91,12 @@ export const MovieDetails = styled.div`
     margin-top: 1rem;
     color: #f6f6f6;
     font-size: 0.8rem;
+  }
+
+  .loading {
+    font-size: 3rem;
+    color: #f6f6f6;
+    text-align: center;
+    word-wrap: break-word;
   }
 `;

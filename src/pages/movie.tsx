@@ -11,6 +11,7 @@ export default function movie({}: propsType) {
   const router = useRouter();
   const API_IMG = "https://image.tmdb.org/t/p/w500/";
   const movieDuration = (movieDetails.runtime / 60).toFixed(1);
+  //const genres = movieDetails.genres.map((genre) => genre.name);
 
   useEffect(() => {
     const movie = router.query.movie;
@@ -25,40 +26,60 @@ export default function movie({}: propsType) {
         });
   }, [router]);
 
-  return (
-    <>
-      <NavBar page="details" />
-      <MovieDetails>
-        <div className="left">
-          <img
-            className="poster"
-            src={API_IMG + movieDetails.poster_path}
-            alt=""
-          />
-        </div>
+  if (movieDetails) {
+    return (
+      <>
+        <NavBar page="details" />
+        <MovieDetails>
+          <div className="gridWrapper">
+            <div className="left">
+              <img
+                className="poster"
+                src={API_IMG + movieDetails.poster_path}
+                alt=""
+              />
+            </div>
 
-        <div className="right">
-          <div className="top">
-            <div className="topLeft">
-              <h1>{movieDetails.title}</h1>
-              <div className="topMiddle">
-                <img src="images/clock.png" alt="Time" />
-                <p>{movieDuration + `hr`}</p>
+            <div className="right">
+              <div className="top">
+                <div className="topLeft">
+                  <h1>{movieDetails.title}</h1>
+                  <div className="topMiddle">
+                    <img src="images/clock.png" alt="Time" />
+                    <p>{movieDuration + `hr`}</p>
+                  </div>
+                </div>
+                <div className="topRight">
+                  <img src="images/icon-star.png" alt="Star" />
+                  <p>{movieDetails.vote_average}</p>
+                </div>
+              </div>
+              {/* <div className="badges">
+                <BadgeGenre genre={genres}/>
+              </div> */}
+              <div className="middle">
+                <p>{movieDetails.overview}</p>
+              </div>
+              <div className="bottom">
+                <p>{movieDetails.release_date}</p>
               </div>
             </div>
-            <div className="topRight">
-              <img src="images/icon-star.png" alt="Star" />
-              <p>{movieDetails.vote_average}</p>
-            </div>
           </div>
-          <div className="middle">
-            <p>{movieDetails.overview}</p>
+        </MovieDetails>
+      </>
+    );
+  } else {
+    return (
+      <>
+        <NavBar page="details" />
+        <MovieDetails>
+          <div className="wrapper">
+            <h3 className="loading">
+              Aguarde enquanto procuramos pelos melhores resultados...
+            </h3>
           </div>
-          <div className="bottom">
-            <p>{movieDetails.release_date}</p>
-          </div>
-        </div>
-      </MovieDetails>
-    </>
-  );
+        </MovieDetails>
+      </>
+    );
+  }
 }

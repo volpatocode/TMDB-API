@@ -21,7 +21,7 @@ export const NavBar = styled.div`
     display: flex;
     align-items: center;
     background-color: #000;
-    column-gap: 10rem;
+    column-gap: 3.5rem;
   }
 
   .logo {
@@ -39,7 +39,7 @@ export const NavBar = styled.div`
     border: none;
     padding: 8px 18px;
     border-radius: 15px;
-    min-width: 500px;
+    width: 100%;
   }
 
   .left input::placeholder {
