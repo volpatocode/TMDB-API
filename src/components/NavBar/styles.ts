@@ -21,7 +21,7 @@ export const NavBar = styled.div`
     display: flex;
     align-items: center;
     background-color: #000;
-    column-gap: 160px;
+    column-gap: 10rem;
   }
 
   .logo {
