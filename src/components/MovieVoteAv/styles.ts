@@ -7,4 +7,6 @@ export const MovieVoteAv= styled.div`
     font-size: 1.5rem;
     font-weight: bolder;
     color: #fff;
+    width: 100%;
+    justify-content: center;
 `;
