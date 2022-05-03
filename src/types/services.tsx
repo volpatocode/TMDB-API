@@ -6,7 +6,7 @@ export type movieDetailsType = {
   poster_path: string;
   vote_average: number;
   overview: string;
-  release_Date: string;
+  release_date: string;
   backdrop_path: string;
 };
 

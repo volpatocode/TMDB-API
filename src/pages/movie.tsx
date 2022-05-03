@@ -5,12 +5,8 @@ import { MovieDetails } from "../components/MovieDetails/styles";
 import BadgeGenre from "../components/BadgeGenre";
 import { movieDetailsType } from "../types/services";
 
-type propsType = {
-  
-}
-
-export default function movie({}: propsType) {
-  const [movieDetails, setMovieDetails] = useState({});
+export default function movie({}: movieDetailsType) {
+  const [movieDetails, setMovieDetails] = useState({} as movieDetailsType);
   const router = useRouter();
   const API_IMG = "https://image.tmdb.org/t/p/w500/";
   const movieDuration = (movieDetails.runtime / 60).toFixed(1);
