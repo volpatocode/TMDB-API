@@ -5,12 +5,10 @@ type propsType = {
   genre: string;
 };
 
-const index = ({genre}: propsType) => {
+const index = ({ genre }: propsType) => {
   return (
     <>
-      <S.BadgeGenre>
-        <p>{genre}</p>
-      </S.BadgeGenre>
+      <S.BadgeGenre>{genre}</S.BadgeGenre>
     </>
   );
 };

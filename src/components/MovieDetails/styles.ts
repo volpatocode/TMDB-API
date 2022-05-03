@@ -99,4 +99,14 @@ export const MovieDetails = styled.div`
     text-align: center;
     word-wrap: break-word;
   }
+
+  .badges{
+    display: flex;
+    width: fit-content;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 1rem;
+  }
 `;
+

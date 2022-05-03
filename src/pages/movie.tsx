@@ -3,9 +3,11 @@ import NavBar from "../components/NavBar";
 import { useRouter } from "next/router";
 import { MovieDetails } from "../components/MovieDetails/styles";
 import BadgeGenre from "../components/BadgeGenre";
-// import { movieDetailsType} from "../types/services";
+import { movieDetailsType } from "../types/services";
 
-type propsType = {};
+type propsType = {
+  
+}
 
 export default function movie({}: propsType) {
   const [movieDetails, setMovieDetails] = useState({});
