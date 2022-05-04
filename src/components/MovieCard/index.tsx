@@ -18,7 +18,7 @@ const index = ({ title, vote_average, poster_path, id}: propsType) => {
   const movieId = `${id}`
 
   return (
-    <Link href={`http://localhost:3000/movie?movie=${movieId}`}>
+    <Link href={`/movie?movie=${movieId}`}>
       <S.MovieCard>
         <div className="top">
           <MovieTitle titleText={title} />
